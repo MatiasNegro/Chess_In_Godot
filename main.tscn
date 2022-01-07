@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="Label" type="Label"]
+margin_left = 40.0
+margin_right = 354.0
+margin_bottom = 97.0
+text = "Hello world
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
