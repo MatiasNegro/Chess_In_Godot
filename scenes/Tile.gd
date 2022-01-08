@@ -1,14 +1,14 @@
-extends Panel
+extends Area2D
 
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var 
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$Sprite.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,5 +16,10 @@ func _ready():
 #	pass
 
 
-func _on_Button_pressed():
-	pass # Replace with function body.
+func _on_Tile_mouse_entered():
+	$Sprite.show()
+
+
+
+func _on_Tile_mouse_exited():
+	$Sprite.hide()
