@@ -7,7 +7,7 @@
 extents = Vector2( 26.5, 26.5 )
 
 [node name="Tile" type="Area2D"]
-position = Vector2( 35, 26 )
+position = Vector2( 5, 5 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

@@ -1,22 +1,30 @@
 extends Node2D
-
-
-var board
-var Tile = preload("res://scenes/Tile.gd")
-
+class_name Board
+var SIZE = 8
+var tiles = []
+var new_tile 
+var pos = {
+	pos_x = 0,
+	pos_y = 0
+}
+var incremental = 10
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	board = get_tales()
-	print(board)
+	$Sprite.show()
+	generate_tiles()
+	for i in range(SIZE * SIZE):
+		tiles[i].show()
+		
+	
+func generate_tiles():
+	for i in range(SIZE * SIZE):
+			new_tile = load("res://scenes/Tile.tscn").instance()
+			new_tile.set_position(Vector2(pos.pos_x + incremental, pos.pos_y + incremental))
+			incremental += 10
+			add_child(new_tile)
+			tiles.append(new_tile)
+			
+			
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-func get_tales():
-	var temp = []
-	for i in self.get_children():
-		if i is Tile:
-			temp.append(i)
 
-	return temp
