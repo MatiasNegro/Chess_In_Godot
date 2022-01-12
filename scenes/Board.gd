@@ -3,11 +3,18 @@ class_name Board
 var SIZE = 8
 var tiles = []
 var new_tile 
-var pos = {
-	pos_x = 0,
-	pos_y = 0
+var first_tile
+var init_pos = {
+	pos_x = 115,
+	pos_y = 119,
 }
-var incremental = 10
+
+var incr_pos = {
+	x = 57,
+	y = 56,
+}
+var incr_x = 1
+var incr_y = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Sprite.show()
@@ -17,10 +24,19 @@ func _ready():
 		
 	
 func generate_tiles():
+	first_tile = load("res://scenes/Tile.tscn").instance()
+	first_tile.set_position(Vector2(init_pos.pos_x , init_pos.pos_y))
+	add_child(first_tile)
+	tiles.append(first_tile)
 	for i in range(SIZE * SIZE):
 			new_tile = load("res://scenes/Tile.tscn").instance()
-			new_tile.set_position(Vector2(pos.pos_x + incremental, pos.pos_y + incremental))
-			incremental += 10
+			if i % 8 != 0:
+				new_tile.set_position(Vector2(init_pos.pos_x + (incr_x * incr_pos.x), init_pos.pos_y))
+				incr_x +=1
+			else:
+				new_tile.set_position(Vector2(init_pos.pos_x , init_pos.pos_y + (incr_y * incr_pos.y)))
+				incr_x = 1
+				incr_y += 1
 			add_child(new_tile)
 			tiles.append(new_tile)
 			
