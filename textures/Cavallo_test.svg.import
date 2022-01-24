@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chessboard-Standard_by_DG-RA_.svg-d682a962f21601a7e557be9c707b8089.stex"
+path="res://.import/Cavallo_test.svg-f391c0039ea335e4627ac8465223ada4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Chessboard-Standard_by_DG-RA_.svg"
-dest_files=[ "res://.import/Chessboard-Standard_by_DG-RA_.svg-d682a962f21601a7e557be9c707b8089.stex" ]
+source_file="res://textures/Cavallo_test.svg"
+dest_files=[ "res://.import/Cavallo_test.svg-f391c0039ea335e4627ac8465223ada4.stex" ]
 
 [params]
 
