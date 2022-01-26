@@ -3,8 +3,8 @@ var id_tile
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-func set_id(id):
-	id_tile = id
+func set_id(x, y):
+	id_tile = x*10 + y
 	
 func get_id():
 	return id_tile
@@ -29,3 +29,4 @@ func _on_Area2D_mouse_exited():
 
 func set_position(pos):
 	self.position = pos
+

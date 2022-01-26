@@ -27,7 +27,7 @@ func set_tiles():
 	var new_tile
 	for i in range(0, SIZE * SIZE + 1):
 		new_tile = tile.instance()
-		new_tile.set_id(i)
+		new_tile.set_id(to_incr_y + 1,to_incr_x + 1)
 		new_tile.set_position(Vector2(pos.x + (64 * to_incr_x), pos.y + (64 * to_incr_y)))
 		self.add_child(new_tile)
 		to_incr_x += 1
