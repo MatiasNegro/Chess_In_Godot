@@ -2,7 +2,8 @@ extends Node2D
 
 var SIZE = 8
 var tile = preload("res://scenes/Tile.tscn")
-var piece = preload("res://scenes/Piece.tscn")
+var piece = preload("res://scenes/black_horse.tscn")
+var wh = preload("res://scenes/white_horse.tscn")
 
 var pos = {
 	x = 0,
@@ -17,6 +18,8 @@ func _ready():
 	set_tiles()
 	var new_piece = piece.instance()
 	add_child(new_piece)
+	var new_wh = wh.instance()
+	add_child(new_wh)
 	for child in get_tree().get_nodes_in_group("tile_zone"):
 		print(child.get_id())
 		

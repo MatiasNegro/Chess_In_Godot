@@ -4,9 +4,9 @@ var selected = false
 var rest_point
 var rest_nodes =[]
 
+
 func _ready():
 	rest_nodes = get_tree().get_nodes_in_group("zone")
-	rest_point = rest_nodes[0].global_position
 
 
 
@@ -29,9 +29,11 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		if event.pressed:
 			selected = true
+			print("SI")
 		else:
 			if event.button_index == BUTTON_LEFT and not event.pressed:
 				selected = false
+				print("NO")
 				var shortest_distance = 512
 				for child in rest_nodes:
 					var distance =  global_position.distance_to(child.global_position)
@@ -39,4 +41,5 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 						rest_point = child.global_position
 						shortest_distance = distance 
 
-
+func set_rest(rest_selected):
+	rest_point = rest_selected
