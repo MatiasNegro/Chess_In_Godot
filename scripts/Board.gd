@@ -4,6 +4,7 @@ var SIZE = 8
 var tile = preload("res://scenes/Tile.tscn")
 var piece = preload("res://scenes/black_horse.tscn")
 var wh = preload("res://scenes/white_horse.tscn")
+var move_log = []
 
 var pos = {
 	x = 0,
@@ -20,8 +21,7 @@ func _ready():
 	add_child(new_piece)
 	var new_wh = wh.instance()
 	add_child(new_wh)
-	for child in get_tree().get_nodes_in_group("tile_zone"):
-		print(child.get_id())
+	new_wh.connect("move_made", self, "move_made_print")
 		
 func set_tiles():
 	var new_tile
@@ -37,6 +37,7 @@ func set_tiles():
 			to_incr_y += 1
 			to_incr_x = 0
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func move_made_print(new_pos):
+	if
+	print(str(new_pos) + "QUESTO E' IL SEGNALE")
+	
