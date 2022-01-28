@@ -1,10 +1,11 @@
 extends Node2D
 
 var SIZE = 8
-var tile = preload("res://scenes/Tile.tscn")
-var piece = preload("res://scenes/black_horse.tscn")
-var wh = preload("res://scenes/white_horse.tscn")
+var tile = load("res://scenes/Tile.tscn")
+var piece = load("res://scenes/black_horse.tscn")
+var wh = load("res://scenes/white_horse.tscn")
 var move_log = []
+#onready var move = get_node("Move")
 
 var pos = {
 	x = 0,
@@ -21,8 +22,8 @@ func _ready():
 	add_child(new_piece)
 	var new_wh = wh.instance()
 	add_child(new_wh)
-	new_wh.connect("move_made", self, "move_made_print")
-		
+
+
 func set_tiles():
 	var new_tile
 	for i in range(0, SIZE * SIZE + 1):
@@ -36,8 +37,3 @@ func set_tiles():
 				continue
 			to_incr_y += 1
 			to_incr_x = 0
-	
-func move_made_print(new_pos):
-	if
-	print(str(new_pos) + "QUESTO E' IL SEGNALE")
-	

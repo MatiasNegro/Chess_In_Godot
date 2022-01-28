@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "Move",
+"language": "GDScript",
+"path": "res://scripts/move.gd"
+} ]
+_global_script_class_icons={
+"Move": ""
+}
+
 [application]
 
 config/name="board_test"
