@@ -10,7 +10,6 @@ var move = load("res://scripts/move.gd")
 func _ready():
 	rest_nodes = get_tree().get_nodes_in_group("zone")
 
-
 func _process(delta):
 	if selected:
 		follow_mouse(delta)

@@ -1,5 +1,9 @@
 extends "res://scripts/Piece.gd"
 
-func _ready():
-	set_rest(rest_nodes[1].global_position)
+func init(rest_zone):
+	set_rest(rest_zone)
+	
+func set_where_rested_id(tile):
+	where_rested_id = tile.get_id()
+
 	
