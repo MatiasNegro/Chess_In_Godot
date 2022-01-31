@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/white_horse.png-753190f653bd351897a358d7a96b329a.stex"
+path="res://.import/WhiteRook.png-31a12fb94ac4101f71de452f9a2cc81c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/white_horse.png"
-dest_files=[ "res://.import/white_horse.png-753190f653bd351897a358d7a96b329a.stex" ]
+source_file="res://textures/pieces/WhiteRook.png"
+dest_files=[ "res://.import/WhiteRook.png-31a12fb94ac4101f71de452f9a2cc81c.stex" ]
 
 [params]
 
