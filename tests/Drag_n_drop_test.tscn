@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/Tile.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/black_horse.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/pieces/black_horse.tscn" type="PackedScene" id=2]
+
 
 [node name="Drag_n_drop_test" type="Node2D"]
 
