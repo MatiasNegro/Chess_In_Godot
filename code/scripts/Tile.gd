@@ -1,5 +1,7 @@
 extends Node2D
 var id_tile
+var available: bool = true
+var occupied_by: Object
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -13,11 +15,11 @@ func get_id():
 func _ready():
 	$Sprite.hide()
 
+func set_available(available):
+	self.available = available
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+func is_available():
+	return available
 
 func _on_Area2D_mouse_entered():
 	$Sprite.show() # Replace with function body.
@@ -30,3 +32,16 @@ func _on_Area2D_mouse_exited():
 func set_position(pos):
 	self.position = pos
 
+
+
+
+
+
+func _on_Area2D_body_entered(body):
+	occupied_by = body
+	set_available(false)
+	print("ENTRATO")
+	
+func _on_Area2D_body_exited(body):
+	occupied_by = null
+	set_available(true)

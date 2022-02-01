@@ -6,4 +6,5 @@ func init(rest_zone):
 func set_where_rested_id(tile):
 	where_rested_id = tile.get_id()
 
+
 	

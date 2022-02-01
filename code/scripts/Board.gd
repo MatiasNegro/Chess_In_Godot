@@ -58,64 +58,73 @@ func load_pieces():
 			new_piece = black_pieces[0].instance()
 			new_piece.init(tile.get_node("drop_zone").global_position)
 			new_piece.set_where_rested_id(tile)
+			new_piece.set_where_rested_tile(tile)
 			add_child(new_piece)
 		elif((tile.get_id() -10 == 2 and tile.get_id() / 10 == 1) or (tile.get_id() -10 == 7 and tile.get_id() / 10 == 1)):
 			new_piece = black_pieces[2].instance()
 			new_piece.init(tile.get_node("drop_zone").global_position)
 			new_piece.set_where_rested_id(tile)
+			new_piece.set_where_rested_tile(tile)
 			add_child(new_piece)
 		elif((tile.get_id() -10 == 1 and tile.get_id() / 10 == 1) or (tile.get_id() -10 == 8 and tile.get_id() / 10 == 1)):
 			new_piece = black_pieces[1].instance()
 			new_piece.init(tile.get_node("drop_zone").global_position)
 			new_piece.set_where_rested_id(tile)
+			new_piece.set_where_rested_tile(tile)
 			add_child(new_piece)
 		elif((tile.get_id() - 10 == 3 and tile.get_id() / 10 == 1) or (tile.get_id() -10 == 6 and tile.get_id() / 10 == 1)):
 			new_piece = black_pieces[3].instance()
 			new_piece.init(tile.get_node("drop_zone").global_position)
 			new_piece.set_where_rested_id(tile)
+			new_piece.set_where_rested_tile(tile)
 			add_child(new_piece)
 		elif(tile.get_id() -10 == 4 and tile.get_id() / 10 == 1):
 			new_piece = black_pieces[4].instance()
 			new_piece.init(tile.get_node("drop_zone").global_position)
 			new_piece.set_where_rested_id(tile)
+			new_piece.set_where_rested_tile(tile)
 			add_child(new_piece)
 		elif(tile.get_id() -10 == 5 and tile.get_id() / 10 == 1):
 			new_piece = black_pieces[5].instance()
 			new_piece.init(tile.get_node("drop_zone").global_position)
 			new_piece.set_where_rested_id(tile)
+			new_piece.set_where_rested_tile(tile)
 			add_child(new_piece)
-			
-	for tile in tiles:
-		if(tile.get_id() / 10 == 7):
+		elif(tile.get_id() / 10 == 7):
 			new_piece = white_pieces[0].instance()
 			new_piece.init(tile.get_node("drop_zone").global_position)
 			new_piece.set_where_rested_id(tile)
+			new_piece.set_where_rested_tile(tile)
 			add_child(new_piece)
 		elif((tile.get_id() - 80 == 2 and tile.get_id() / 10 == 8) or (tile.get_id() - 80 == 7 and tile.get_id() / 10 == 8)):
 			new_piece = white_pieces[2].instance()
 			new_piece.init(tile.get_node("drop_zone").global_position)
 			new_piece.set_where_rested_id(tile)
+			new_piece.set_where_rested_tile(tile)
 			add_child(new_piece)
 		elif((tile.get_id() - 80 == 1 and tile.get_id() / 10 == 8) or (tile.get_id() - 80 == 8 and tile.get_id() / 10 == 8)):
 			new_piece = white_pieces[1].instance()
 			new_piece.init(tile.get_node("drop_zone").global_position)
 			new_piece.set_where_rested_id(tile)
+			new_piece.set_where_rested_tile(tile)
 			add_child(new_piece)
 		elif((tile.get_id() - 80 == 3 and tile.get_id() / 10 == 8) or (tile.get_id() - 80 == 6 and tile.get_id() / 10 == 8)):
 			new_piece = white_pieces[3].instance()
 			new_piece.init(tile.get_node("drop_zone").global_position)
 			new_piece.set_where_rested_id(tile)
+			new_piece.set_where_rested_tile(tile)
 			add_child(new_piece)
 		elif(tile.get_id() - 80 == 5 and tile.get_id() / 10 == 8):
 			new_piece = white_pieces[4].instance()
 			new_piece.init(tile.get_node("drop_zone").global_position)
 			new_piece.set_where_rested_id(tile)
+			new_piece.set_where_rested_tile(tile)
 			add_child(new_piece)
 		elif(tile.get_id() - 80 == 4 and tile.get_id() / 10 == 8):
 			new_piece = white_pieces[5].instance()
 			new_piece.init(tile.get_node("drop_zone").global_position)
 			new_piece.set_where_rested_id(tile)
+			new_piece.set_where_rested_tile(tile)
 			add_child(new_piece)
-			
 	pass
 	

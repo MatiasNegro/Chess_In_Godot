@@ -37,12 +37,13 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 				selected = false
 				var shortest_distance = 512
 				for child in rest_nodes:
-					var distance =  global_position.distance_to(child.global_position)
-					if distance < shortest_distance:
-						set_rest(child.global_position)
-						board_position_id = child.get_parent().get_id()
-						board_position = child.get_parent()
-						shortest_distance = distance 
+					if(child.get_parent().is_available()):
+						var distance =  global_position.distance_to(child.global_position)
+						if distance < shortest_distance:
+							set_rest(child.global_position)
+							board_position_id = child.get_parent().get_id()
+							board_position = child.get_parent()
+							shortest_distance = distance 
 				if(board_position.is_available() == false):
 					print("NON E' DISPONIBILE")
 					set_rest(where_rested_tile.get_node("drop_zone").global_position)

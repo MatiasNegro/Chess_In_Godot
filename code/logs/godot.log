@@ -1,7 +1,0 @@
-Godot Engine v3.4.2.stable.mono.official.45eaa2daf - https://godotengine.org
-OpenGL ES 3.0 Renderer: Radeon RX 580 Series
-OpenGL ES Batching: ON
- 
-Mono: Log file is: 'C:/Users/Matias/AppData/Roaming/Godot/mono/mono_logs/2022-01-31_21.11.42_99628.log'
-ERROR: Condition "default_certs != nullptr" is true.
-   at: load_default_certificates (modules/mbedtls/crypto_mbedtls.cpp:314) - Condition "default_certs != nullptr" is true.

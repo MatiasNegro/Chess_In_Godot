@@ -10,3 +10,8 @@ func set_where_rested_id(tile):
 
 	
 
+
+
+func _on_RigidBody2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	
+	pass 
